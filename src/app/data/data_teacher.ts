@@ -1,0 +1,1 @@
+export const teachers = {"teacherPersonId":76822,"TeacherName":"Stanley, Teresa","Email":"tstanley@guhsd.net","FirstName":"Teresa","Code":3896,"SectionId":2}

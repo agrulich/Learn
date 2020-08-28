@@ -1,0 +1,39 @@
+<kendo-grid
+    [data]="service.currentStudents"
+    scrollable="none"
+>
+    <kendo-grid-column field="Student" width="350">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            {{dataItem.StuId}} - {{dataItem.lastName}} , {{dataItem.firstname}}
+        </ng-template>
+    </kendo-grid-column>
+
+    <kendo-grid-column field="Input1" title="Question 1" width="200">
+        <ng-template kendoGridCellTemplate
+          let-dataItem="dataItem"
+        >
+          <kendo-dropdownlist
+            [data]="listItems"
+            [valuePrimitive]="true"
+            (valueChange)="onCategoryChange($event, dataItem, 1)"
+            [(value)]="dataItem.Input1"
+          >
+          </kendo-dropdownlist>
+        </ng-template>
+      </kendo-grid-column>
+
+    <kendo-grid-column field="Input2" title="Question 2" width="200">
+        <ng-template kendoGridCellTemplate
+          let-dataItem="dataItem"
+        >
+          <kendo-dropdownlist
+            [data]="listItems"
+            [valuePrimitive]="true"
+            (valueChange)="onCategoryChange($event, dataItem, 2)"
+            [(value)]="dataItem.Input2"
+          >
+          </kendo-dropdownlist>
+        </ng-template>
+      </kendo-grid-column>
+
+</kendo-grid>

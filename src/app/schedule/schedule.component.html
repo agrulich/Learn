@@ -1,0 +1,16 @@
+<kendo-grid
+    [data]="service.currentSchedule"
+    scrollable="none"
+    (cellClick)="cellClickHandler($event)"
+>
+    <kendo-grid-column field="periodstart" width="75"  title="Period"></kendo-grid-column>
+
+    <kendo-grid-column field="Course" width="150">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            {{dataItem.crseId}} - {{dataItem.courseName}}
+        </ng-template>
+    </kendo-grid-column>
+
+    <kendo-grid-column field="Cnt" width="50"></kendo-grid-column>
+
+</kendo-grid>
